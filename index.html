@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NESTIQ — Find Your Dream Property</title>
+  <meta name="description"
+    content="India's most trusted real estate platform. Buy, sell & rent properties across top cities." />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='28'>🏠</text></svg>" />
+</head>
+
+<body>
+
+  <!-- ================================================
+     NAVBAR (shared across all pages)
+     ================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo" data-page="page-home">
+        <div class="logo-icon">N</div>
+        NESTIQ<span class="logo-dot">.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#" class="nav-link" data-page="page-home">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link" data-page="page-listings">Buy ▾</a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🏠</span> Residential</a>
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🏢</span> Commercial</a>
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🏗️</span> New
+              Projects</a>
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🌿</span> Plots & Land</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#" class="nav-link" data-page="page-listings">Rent ▾</a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🛋️</span> Furnished</a>
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🏨</span> PG / Hostel</a>
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🏪</span> Office Space</a>
+            <a href="#" class="dropdown-item" data-page="page-listings"><span class="di-icon">🏬</span> Shop /
+              Showroom</a>
+          </div>
+        </li>
+        <li><a href="#" class="nav-link" data-page="page-listings">Projects</a></li>
+        <li><a href="#" class="nav-link" data-page="page-listings">Commercial</a></li>
+        <li><a href="#" class="nav-link" data-page="page-blog">Insights</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost btn-sm" onclick="openModal('modal-login')">Login</button>
+        <button class="nav-post-btn" onclick="openModal('modal-post')">+ Post Property FREE</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#" class="mobile-nav-link" data-page="page-home">🏠 Home</a>
+    <a href="#" class="mobile-nav-link" data-page="page-listings">🛒 Buy Property</a>
+    <a href="#" class="mobile-nav-link" data-page="page-listings">🔑 Rent Property</a>
+    <a href="#" class="mobile-nav-link" data-page="page-listings">🏗️ New Projects</a>
+    <a href="#" class="mobile-nav-link" data-page="page-blog">📰 Insights</a>
+    <div style="padding: 20px 0; display: flex; flex-direction: column; gap: 10px;">
+      <button class="btn btn-outline" onclick="openModal('modal-login')">Login / Register</button>
+      <button class="btn btn-gold" onclick="openModal('modal-post')">+ Post Property FREE</button>
+    </div>
+  </div>
+
+  <!-- ================================================
+     PAGE: HOME
+     ================================================ -->
+  <div id="page-home" class="page">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-bg-shapes">
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+      </div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-eyebrow">India's #1 Real Estate Platform</div>
+            <h1 class="hero-title">
+              Find Your<br><em>Perfect Home</em><br>Without Stress
+            </h1>
+            <p class="hero-desc">Explore 5 lakh+ verified properties across 30+ cities. Trusted by 2 crore+ home seekers
+              every year.</p>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-num" data-count="500000">5L+</div>
+                <div class="hero-stat-label">Live Properties</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num" data-count="30">30+</div>
+                <div class="hero-stat-label">Cities</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num" data-count="20000000">2Cr+</div>
+                <div class="hero-stat-label">Happy Users</div>
+              </div>
+            </div>
+            <div class="hero-actions">
+              <button class="btn btn-primary btn-lg" data-page="page-listings">Browse Properties →</button>
+              <button class="btn btn-outline btn-lg" onclick="openModal('modal-post')">List Your Property</button>
+            </div>
+          </div>
+
+          <div class="hero-visual fade-in">
+            <div class="hero-img-grid">
+              <div class="hero-img-card" data-page="page-detail">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Luxury Villa"
+                  loading="lazy" />
+                <div class="hero-img-overlay">
+                  <span class="hero-img-tag">Featured</span>
+                  <div class="hero-img-price">₹2.8 Cr — Luxury Villa</div>
+                </div>
+              </div>
+              <div class="hero-img-card" data-page="page-detail">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&q=80" alt="Modern Apartment"
+                  loading="lazy" />
+                <div class="hero-img-overlay">
+                  <span class="hero-img-tag">New</span>
+                  <div class="hero-img-price">₹85 L</div>
+                </div>
+              </div>
+              <div class="hero-img-card" data-page="page-detail">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&q=80" alt="Apartment"
+                  loading="lazy" />
+                <div class="hero-img-overlay">
+                  <span class="hero-img-tag">Ready</span>
+                  <div class="hero-img-price">₹1.2 Cr</div>
+                </div>
+              </div>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge-icon">🔑</span>
+              <div>
+                <div class="hero-badge-text-main">1,240 New Listings</div>
+                <div class="hero-badge-text-sub">Added this week</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="search-section">
+      <div class="container">
+        <div class="search-box fade-in">
+          <div class="search-tabs">
+            <button class="search-tab active" data-type="buy">Buy</button>
+            <button class="search-tab" data-type="rent">Rent</button>
+            <button class="search-tab" data-type="projects">New Projects</button>
+            <button class="search-tab" data-type="pg">PG / Co-living</button>
+            <button class="search-tab" data-type="commercial">Commercial</button>
+            <button class="search-tab" data-type="plot">Plot / Land</button>
+          </div>
+          <div class="search-fields">
+            <div class="search-field">
+              <label>Location</label>
+              <input type="text" id="searchLocation" class="search-location-inp"
+                placeholder="City, locality, landmark..." />
+            </div>
+            <div class="search-field">
+              <label>Property Type</label>
+              <select>
+                <option value="">All Types</option>
+                <option>Apartment / Flat</option>
+                <option>Independent House / Villa</option>
+                <option>Builder Floor</option>
+                <option>Penthouse</option>
+                <option>Studio Apartment</option>
+                <option>Farm House</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label>Budget</label>
+              <select>
+                <option value="">Any Budget</option>
+                <option>Under ₹25 Lakhs</option>
+                <option>₹25 - ₹50 Lakhs</option>
+                <option>₹50 L - ₹1 Cr</option>
+                <option>₹1 Cr - ₹2 Cr</option>
+                <option>Above ₹2 Cr</option>
+              </select>
+            </div>
+            <div class="search-field">
+              <label>BHK</label>
+              <select>
+                <option value="">Any Size</option>
+                <option>1 RK / Studio</option>
+                <option>1 BHK</option>
+                <option>2 BHK</option>
+                <option>3 BHK</option>
+                <option>4+ BHK</option>
+              </select>
+            </div>
+            <div class="search-btn-wrap">
+              <button class="search-go-btn" data-page="page-listings">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <circle cx="11" cy="11" r="8" />
+                  <path d="m21 21-4.35-4.35" />
+                </svg>
+                Search
+              </button>
+            </div>
+          </div>
+          <div class="search-suggestions">
+            <span class="search-suggest-label">Popular:</span>
+            <span class="search-chip">Mumbai</span>
+            <span class="search-chip">Bangalore</span>
+            <span class="search-chip">Delhi NCR</span>
+            <span class="search-chip">Pune</span>
+            <span class="search-chip">Hyderabad</span>
+            <span class="search-chip">Chennai</span>
+            <span class="search-chip">Noida</span>
+            <span class="search-chip">Gurgaon</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Property Categories -->
+    <section class="section-pad-sm">
+      <div class="container">
+        <div class="props-header fade-in">
+          <div>
+            <div class="tag tag-gold" style="margin-bottom:10px">Browse by Type</div>
+            <h2 class="section-title">What are you looking for?</h2>
+          </div>
+        </div>
+        <div class="categories-grid fade-in stagger-1">
+          <div class="category-card">
+            <span class="category-icon">🏠</span>
+            <div class="category-name">Residential</div>
+            <div class="category-count">2,48,000+ listings</div>
+          </div>
+          <div class="category-card">
+            <span class="category-icon">🏢</span>
+            <div class="category-name">Commercial</div>
+            <div class="category-count">42,000+ listings</div>
+          </div>
+          <div class="category-card">
+            <span class="category-icon">🏗️</span>
+            <div class="category-name">New Projects</div>
+            <div class="category-count">8,500+ projects</div>
+          </div>
+          <div class="category-card">
+            <span class="category-icon">🌿</span>
+            <div class="category-name">Plot / Land</div>
+            <div class="category-count">65,000+ plots</div>
+          </div>
+          <div class="category-card">
+            <span class="category-icon">🛏️</span>
+            <div class="category-name">PG / Hostel</div>
+            <div class="category-count">18,000+ PGs</div>
+          </div>
+          <div class="category-card">
+            <span class="category-icon">🏨</span>
+            <div class="category-name">Co-living</div>
+            <div class="category-count">3,200+ spaces</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="section-pad" style="background: var(--warm-white);">
+      <div class="container">
+        <div class="props-header fade-in">
+          <div>
+            <div class="tag tag-gold" style="margin-bottom:10px">Hand-picked</div>
+            <h2 class="section-title">Featured Properties</h2>
+            <p class="section-subtitle">Verified, ready-to-move homes curated just for you</p>
+          </div>
+          <a href="#" class="view-all-link" data-page="page-listings">View all properties →</a>
+        </div>
+        <div class="props-grid">
+
+          <!-- Card 1 -->
+          <div class="prop-card fade-in stagger-1" data-page="page-detail">
+            <div class="prop-img-wrap">
+              <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80"
+                alt="Luxury Villa Bandra" loading="lazy" />
+              <div class="prop-badges">
+                <span class="prop-badge prop-badge-type">Villa</span>
+                <span class="prop-badge prop-badge-featured">Featured</span>
+              </div>
+              <button class="prop-fav">🤍</button>
+              <div class="prop-gallery-dots"><span class="active"></span><span></span><span></span></div>
+            </div>
+            <div class="prop-body">
+              <div class="prop-price">₹2.8 Cr <span>onwards</span></div>
+              <div class="prop-title">Elegant 4 BHK Villa with Private Pool</div>
+              <div class="prop-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Bandra West, Mumbai
+              </div>
+              <div class="prop-features">
+                <div class="prop-feat"><span class="feat-icon">🛏️</span> 4 BHK</div>
+                <div class="prop-feat"><span class="feat-icon">🚿</span> 4 Bath</div>
+                <div class="prop-feat"><span class="feat-icon">📐</span> 3,200 sqft</div>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-agent">
+                <img src="https://i.pravatar.cc/28?img=1" alt="Agent" class="prop-agent-avatar" />
+                <span class="prop-agent-name">Rahul Sharma</span>
+              </div>
+              <span class="prop-posted">2 days ago</span>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="prop-card fade-in stagger-2" data-page="page-detail">
+            <div class="prop-img-wrap">
+              <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80"
+                alt="Modern Apartment Pune" loading="lazy" />
+              <div class="prop-badges">
+                <span class="prop-badge prop-badge-type">Apartment</span>
+                <span class="prop-badge prop-badge-new">New</span>
+              </div>
+              <button class="prop-fav">🤍</button>
+              <div class="prop-gallery-dots"><span class="active"></span><span></span></div>
+            </div>
+            <div class="prop-body">
+              <div class="prop-price">₹85 L <span>onwards</span></div>
+              <div class="prop-title">Modern 3 BHK High-Rise with City View</div>
+              <div class="prop-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Koregaon Park, Pune
+              </div>
+              <div class="prop-features">
+                <div class="prop-feat"><span class="feat-icon">🛏️</span> 3 BHK</div>
+                <div class="prop-feat"><span class="feat-icon">🚿</span> 2 Bath</div>
+                <div class="prop-feat"><span class="feat-icon">📐</span> 1,450 sqft</div>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-agent">
+                <img src="https://i.pravatar.cc/28?img=5" alt="Agent" class="prop-agent-avatar" />
+                <span class="prop-agent-name">Priya Mehta</span>
+              </div>
+              <span class="prop-posted">1 day ago</span>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="prop-card fade-in stagger-3" data-page="page-detail">
+            <div class="prop-img-wrap">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Studio Bangalore"
+                loading="lazy" />
+              <div class="prop-badges">
+                <span class="prop-badge prop-badge-type">Studio</span>
+              </div>
+              <button class="prop-fav">🤍</button>
+            </div>
+            <div class="prop-body">
+              <div class="prop-price">₹45 L</div>
+              <div class="prop-title">Premium Studio in Tech Corridor</div>
+              <div class="prop-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Whitefield, Bangalore
+              </div>
+              <div class="prop-features">
+                <div class="prop-feat"><span class="feat-icon">🛏️</span> Studio</div>
+                <div class="prop-feat"><span class="feat-icon">🚿</span> 1 Bath</div>
+                <div class="prop-feat"><span class="feat-icon">📐</span> 550 sqft</div>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-agent">
+                <img src="https://i.pravatar.cc/28?img=8" alt="Agent" class="prop-agent-avatar" />
+                <span class="prop-agent-name">Amit Joshi</span>
+              </div>
+              <span class="prop-posted">5 hours ago</span>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="prop-card fade-in stagger-4" data-page="page-detail">
+            <div class="prop-img-wrap">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Penthouse Delhi"
+                loading="lazy" />
+              <div class="prop-badges">
+                <span class="prop-badge prop-badge-type">Penthouse</span>
+                <span class="prop-badge prop-badge-featured">Premium</span>
+              </div>
+              <button class="prop-fav">🤍</button>
+            </div>
+            <div class="prop-body">
+              <div class="prop-price">₹5.2 Cr</div>
+              <div class="prop-title">Ultra-Luxury Penthouse with Rooftop</div>
+              <div class="prop-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Golf Links, New Delhi
+              </div>
+              <div class="prop-features">
+                <div class="prop-feat"><span class="feat-icon">🛏️</span> 5 BHK</div>
+                <div class="prop-feat"><span class="feat-icon">🚿</span> 5 Bath</div>
+                <div class="prop-feat"><span class="feat-icon">📐</span> 5,800 sqft</div>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-agent">
+                <img src="https://i.pravatar.cc/28?img=12" alt="Agent" class="prop-agent-avatar" />
+                <span class="prop-agent-name">Kavya Nair</span>
+              </div>
+              <span class="prop-posted">3 days ago</span>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="prop-card fade-in stagger-1" data-page="page-detail">
+            <div class="prop-img-wrap">
+              <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80"
+                alt="Row House Hyderabad" loading="lazy" />
+              <div class="prop-badges">
+                <span class="prop-badge prop-badge-type">Row House</span>
+              </div>
+              <button class="prop-fav">🤍</button>
+            </div>
+            <div class="prop-body">
+              <div class="prop-price">₹1.6 Cr</div>
+              <div class="prop-title">4 BHK Independent Row House</div>
+              <div class="prop-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Jubilee Hills, Hyderabad
+              </div>
+              <div class="prop-features">
+                <div class="prop-feat"><span class="feat-icon">🛏️</span> 4 BHK</div>
+                <div class="prop-feat"><span class="feat-icon">🚿</span> 3 Bath</div>
+                <div class="prop-feat"><span class="feat-icon">📐</span> 2,200 sqft</div>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-agent">
+                <img src="https://i.pravatar.cc/28?img=15" alt="Agent" class="prop-agent-avatar" />
+                <span class="prop-agent-name">Suresh Reddy</span>
+              </div>
+              <span class="prop-posted">1 week ago</span>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="prop-card fade-in stagger-2" data-page="page-detail">
+            <div class="prop-img-wrap">
+              <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="2BHK Chennai"
+                loading="lazy" />
+              <div class="prop-badges">
+                <span class="prop-badge prop-badge-type">Apartment</span>
+                <span class="prop-badge prop-badge-new">Ready</span>
+              </div>
+              <button class="prop-fav">🤍</button>
+            </div>
+            <div class="prop-body">
+              <div class="prop-price">₹68 L</div>
+              <div class="prop-title">Spacious 2 BHK near IT Corridor</div>
+              <div class="prop-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                OMR, Chennai
+              </div>
+              <div class="prop-features">
+                <div class="prop-feat"><span class="feat-icon">🛏️</span> 2 BHK</div>
+                <div class="prop-feat"><span class="feat-icon">🚿</span> 2 Bath</div>
+                <div class="prop-feat"><span class="feat-icon">📐</span> 1,100 sqft</div>
+              </div>
+            </div>
+            <div class="prop-footer">
+              <div class="prop-agent">
+                <img src="https://i.pravatar.cc/28?img=20" alt="Agent" class="prop-agent-avatar" />
+                <span class="prop-agent-name">Lakshmi V.</span>
+              </div>
+              <span class="prop-posted">4 days ago</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Explore Cities -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="props-header fade-in">
+          <div>
+            <div class="tag tag-sage" style="margin-bottom:10px">Top Locations</div>
+            <h2 class="section-title">Explore by City</h2>
+            <p class="section-subtitle">Discover properties in India's most sought-after cities</p>
+          </div>
+          <a href="#" class="view-all-link" data-page="page-listings">All cities →</a>
+        </div>
+        <div class="cities-grid fade-in">
+          <div class="city-card" data-page="page-listings">
+            <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80" alt="Mumbai"
+              loading="lazy" />
+            <div class="city-overlay"></div>
+            <div class="city-info">
+              <div class="city-name">Mumbai</div>
+              <div class="city-count">68,400+ properties</div>
+            </div>
+          </div>
+          <div class="city-card" data-page="page-listings">
+            <img src="https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&q=80" alt="Bangalore"
+              loading="lazy" />
+            <div class="city-overlay"></div>
+            <div class="city-info">
+              <div class="city-name">Bangalore</div>
+              <div class="city-count">52,000+ properties</div>
+            </div>
+          </div>
+          <div class="city-card" data-page="page-listings">
+            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&q=80" alt="Delhi"
+              loading="lazy" />
+            <div class="city-overlay"></div>
+            <div class="city-info">
+              <div class="city-name">Delhi NCR</div>
+              <div class="city-count">75,200+ properties</div>
+            </div>
+          </div>
+          <div class="city-card" data-page="page-listings">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Hyderabad"
+              loading="lazy" />
+            <div class="city-overlay"></div>
+            <div class="city-info">
+              <div class="city-name">Hyderabad</div>
+              <div class="city-count">38,100+ properties</div>
+            </div>
+          </div>
+          <div class="city-card" data-page="page-listings">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80" alt="Pune"
+              loading="lazy" />
+            <div class="city-overlay"></div>
+            <div class="city-info">
+              <div class="city-name">Pune</div>
+              <div class="city-count">44,500+ properties</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- New Projects -->
+    <section class="section-pad" style="background: var(--warm-white);">
+      <div class="container">
+        <div class="props-header fade-in">
+          <div>
+            <div class="tag tag-sky" style="margin-bottom:10px">Builders</div>
+            <h2 class="section-title">New Launch Projects</h2>
+            <p class="section-subtitle">Exclusive launches from India's top developers</p>
+          </div>
+          <a href="#" class="view-all-link" data-page="page-listings">All projects →</a>
+        </div>
+        <div class="projects-grid fade-in">
+          <div class="project-card" data-page="page-detail">
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=700&q=80" alt="Project"
+              loading="lazy" />
+            <div class="project-overlay"></div>
+            <div class="project-body">
+              <div class="project-developer">Godrej Properties</div>
+              <div class="project-name">Godrej Reserve</div>
+              <div class="project-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                </svg>
+                Kandivali East, Mumbai
+              </div>
+              <div class="project-price-from">Starting from</div>
+              <div class="project-price">₹1.4 Cr</div>
+              <div class="project-tags">
+                <span class="project-tag">2/3 BHK</span>
+                <span class="project-tag">Ready 2025</span>
+                <span class="project-tag">RERA ✓</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-page="page-detail">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&q=80" alt="Project"
+              loading="lazy" />
+            <div class="project-overlay"></div>
+            <div class="project-body">
+              <div class="project-developer">Prestige Group</div>
+              <div class="project-name">Prestige Lakeside</div>
+              <div class="project-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                </svg>
+                Whitefield, Bangalore
+              </div>
+              <div class="project-price-from">Starting from</div>
+              <div class="project-price">₹92 L</div>
+              <div class="project-tags">
+                <span class="project-tag">2/3/4 BHK</span>
+                <span class="project-tag">Under Const.</span>
+                <span class="project-tag">RERA ✓</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-page="page-detail">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&q=80" alt="Project"
+              loading="lazy" />
+            <div class="project-overlay"></div>
+            <div class="project-body">
+              <div class="project-developer">DLF Limited</div>
+              <div class="project-name">DLF The Camellias</div>
+              <div class="project-location">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                </svg>
+                DLF 5, Gurgaon
+              </div>
+              <div class="project-price-from">Starting from</div>
+              <div class="project-price">₹7.5 Cr</div>
+              <div class="project-tags">
+                <span class="project-tag">4/5 BHK</span>
+                <span class="project-tag">Ready</span>
+                <span class="project-tag">RERA ✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-visual fade-in">
+            <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=700&q=80" alt="Why NESTIQ"
+              loading="lazy" />
+            <div class="why-visual-badge">
+              <div class="why-badge-num">98%</div>
+              <div class="why-badge-txt">Customer Satisfaction</div>
+            </div>
+          </div>
+          <div>
+            <div class="tag tag-gold fade-in" style="margin-bottom:12px">Why NESTIQ?</div>
+            <h2 class="section-title fade-in">Your Trusted Partner<br>for Every Journey</h2>
+            <p class="section-subtitle fade-in" style="margin-bottom:28px">We make property search simple, safe, and
+              stress-free with industry-leading tools and genuine support.</p>
+            <div class="why-features">
+              <div class="why-feat fade-in stagger-1">
+                <div class="why-feat-icon icon-bg-gold">✅</div>
+                <div>
+                  <div class="why-feat-title">100% Verified Listings</div>
+                  <div class="why-feat-desc">Every property is physically verified by our team. Zero fake listings, zero
+                    wasted site visits.</div>
+                </div>
+              </div>
+              <div class="why-feat fade-in stagger-2">
+                <div class="why-feat-icon icon-bg-sage">🛡️</div>
+                <div>
+                  <div class="why-feat-title">RERA Compliant Projects</div>
+                  <div class="why-feat-desc">All new projects are RERA registered. We show you registration numbers
+                    upfront.</div>
+                </div>
+              </div>
+              <div class="why-feat fade-in stagger-3">
+                <div class="why-feat-icon icon-bg-sky">🤝</div>
+                <div>
+                  <div class="why-feat-title">Zero Brokerage Options</div>
+                  <div class="why-feat-desc">Connect directly with owners for thousands of properties. Save lakhs on
+                    brokerage fees.</div>
+                </div>
+              </div>
+              <div class="why-feat fade-in stagger-4">
+                <div class="why-feat-icon icon-bg-rust">⚡</div>
+                <div>
+                  <div class="why-feat-title">Instant Response</div>
+                  <div class="why-feat-desc">Get responses from agents and owners within minutes. Our AI matches you
+                    faster.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EMI Calculator -->
+    <section class="emi-section">
+      <div class="container">
+        <div class="emi-grid">
+          <div class="fade-in">
+            <div class="tag tag-gold" style="margin-bottom:16px">Free Tool</div>
+            <h2 class="emi-title">Plan Your <em>Home Loan</em> with Confidence</h2>
+            <p class="emi-desc">Use our smart EMI calculator to understand your monthly outflow before you commit.
+              Factor in interest rate, loan amount, and tenure.</p>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:32px;">
+              <div
+                style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 20px;">
+                <div style="font-size:20px; font-weight:700; color:var(--gold-light); font-family:var(--font-display)">
+                  8.5%*</div>
+                <div style="font-size:12px; color:rgba(255,255,255,0.55); margin-top:2px">Lowest Rate</div>
+              </div>
+              <div
+                style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 20px;">
+                <div style="font-size:20px; font-weight:700; color:var(--gold-light); font-family:var(--font-display)">
+                  20 yrs</div>
+                <div style="font-size:12px; color:rgba(255,255,255,0.55); margin-top:2px">Max Tenure</div>
+              </div>
+              <div
+                style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:12px; padding:16px 20px;">
+                <div style="font-size:20px; font-weight:700; color:var(--gold-light); font-family:var(--font-display)">
+                  20+</div>
+                <div style="font-size:12px; color:rgba(255,255,255,0.55); margin-top:2px">Bank Partners</div>
+              </div>
+            </div>
+            <button class="btn btn-gold btn-lg" onclick="openModal('modal-loan')">Get Loan Pre-Approval →</button>
+          </div>
+          <div class="emi-calculator fade-in stagger-2">
+            <div class="emi-field">
+              <div class="emi-field-label">
+                <span>Loan Amount</span>
+                <span class="emi-field-value" id="loanVal">₹50 L</span>
+              </div>
+              <input type="range" class="emi-range" id="loanAmount" min="500000" max="50000000" step="500000"
+                value="5000000" />
+              <div
+                style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.4);margin-top:6px;">
+                <span>₹5 L</span><span>₹5 Cr</span>
+              </div>
+            </div>
+            <div class="emi-field">
+              <div class="emi-field-label">
+                <span>Interest Rate (p.a.)</span>
+                <span class="emi-field-value" id="rateVal">8.5%</span>
+              </div>
+              <input type="range" class="emi-range" id="interestRate" min="6" max="18" step="0.1" value="8.5" />
+              <div
+                style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.4);margin-top:6px;">
+                <span>6%</span><span>18%</span>
+              </div>
+            </div>
+            <div class="emi-field">
+              <div class="emi-field-label">
+                <span>Loan Tenure</span>
+                <span class="emi-field-value" id="tenureVal">20 yrs</span>
+              </div>
+              <input type="range" class="emi-range" id="tenure" min="1" max="30" step="1" value="20" />
+              <div
+                style="display:flex;justify-content:space-between;font-size:11px;color:rgba(255,255,255,0.4);margin-top:6px;">
+                <span>1 yr</span><span>30 yrs</span>
+              </div>
+            </div>
+            <div class="emi-result">
+              <div class="emi-result-label">Your Monthly EMI</div>
+              <div class="emi-result-amount" id="emiResult">₹43,391/mo</div>
+              <div class="emi-result-sub">*Indicative amount. Final EMI subject to bank approval.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="props-header fade-in">
+          <div>
+            <div class="tag tag-sage" style="margin-bottom:10px">Real Stories</div>
+            <h2 class="section-title">Happy Home Owners</h2>
+            <p class="section-subtitle">Join millions who found their dream home through NESTIQ</p>
+          </div>
+        </div>
+        <div class="testimonials-grid">
+          <div class="testimonial-card fade-in stagger-1">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"Found our dream 3 BHK in just 2 weeks. The verification badge gave us so much
+              confidence. The agent was professional and the process was seamless."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/44?img=32" alt="Arjun" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Arjun & Priya Kapoor</div>
+                <div class="testimonial-role">Bought in Pune, Jan 2025</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in stagger-2">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The zero brokerage option saved us ₹1.5 lakhs! We connected directly with the
+              owner and closed the deal in 10 days. Absolutely love NESTIQ!"</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/44?img=47" alt="Meera" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Meera Krishnan</div>
+                <div class="testimonial-role">Rented in Bangalore, Mar 2025</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card fade-in stagger-3">
+            <div class="testimonial-stars">★★★★☆</div>
+            <p class="testimonial-text">"The EMI calculator helped me plan my budget perfectly. The RERA verification
+              gave me peace of mind. I'd recommend NESTIQ to every first-time buyer."</p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/44?img=60" alt="Vikram" class="testimonial-avatar" />
+              <div>
+                <div class="testimonial-name">Vikram Sinha</div>
+                <div class="testimonial-role">Invested in Mumbai, Feb 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Insights -->
+    <section class="section-pad" style="background:var(--warm-white);">
+      <div class="container">
+        <div class="props-header fade-in">
+          <div>
+            <div class="tag tag-gold" style="margin-bottom:10px">Knowledge Hub</div>
+            <h2 class="section-title">Real Estate Insights</h2>
+            <p class="section-subtitle">Market trends, buying guides, and expert advice</p>
+          </div>
+          <a href="#" class="view-all-link" data-page="page-blog">All articles →</a>
+        </div>
+        <div class="blog-grid fade-in">
+          <div class="blog-card" data-page="page-blog">
+            <div class="blog-img"><img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80"
+                alt="Blog" loading="lazy" /></div>
+            <div class="blog-body">
+              <div class="blog-tag"><span class="tag tag-gold">Market Trends</span></div>
+              <div class="blog-title">Mumbai Real Estate: Is 2025 the Right Time to Buy?</div>
+              <div class="blog-excerpt">Prices are stabilizing after a surge. Here's what the data says about the best
+                localities for investment right now.</div>
+              <div class="blog-meta">
+                <div class="blog-author"><img src="https://i.pravatar.cc/24?img=10" alt="" /> Rohan Malhotra</div>
+                <span>·</span><span>5 min read</span>
+              </div>
+            </div>
+          </div>
+          <div class="blog-card" data-page="page-blog">
+            <div class="blog-img"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80"
+                alt="Blog" loading="lazy" /></div>
+            <div class="blog-body">
+              <div class="blog-tag"><span class="tag tag-sage">Home Loans</span></div>
+              <div class="blog-title">10 Things to Check Before Signing Any Property Agreement</div>
+              <div class="blog-excerpt">Legal traps that first-time buyers miss. A comprehensive checklist from our
+                property lawyers.</div>
+              <div class="blog-meta">
+                <div class="blog-author"><img src="https://i.pravatar.cc/24?img=22" alt="" /> Adv. Smita Joshi</div>
+                <span>·</span><span>8 min read</span>
+              </div>
+            </div>
+          </div>
+          <div class="blog-card" data-page="page-blog">
+            <div class="blog-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                alt="Blog" loading="lazy" /></div>
+            <div class="blog-body">
+              <div class="blog-tag"><span class="tag tag-sky">Investing</span></div>
+              <div class="blog-title">Hyderabad's Top 5 Localities for Long-Term ROI in 2025</div>
+              <div class="blog-excerpt">HITEC City vs Gachibowli vs Kondapur — our analysts break down which area gives
+                the best returns.</div>
+              <div class="blog-meta">
+                <div class="blog-author"><img src="https://i.pravatar.cc/24?img=33" alt="" /> Deepak Rao</div>
+                <span>·</span><span>6 min read</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="section-pad">
+      <div class="container">
+        <div class="cta-section fade-in">
+          <div class="cta-inner">
+            <div>
+              <h2 class="cta-title">Ready to List Your Property?</h2>
+              <p class="cta-desc">Post for FREE and reach 2 crore+ active buyers & renters. Get your first inquiry in 24
+                hours.</p>
+            </div>
+            <div class="cta-actions">
+              <button class="btn btn-gold btn-lg" onclick="openModal('modal-post')">Post Property FREE</button>
+              <button class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,0.3); color:white;"
+                onclick="showToast('📞 Our team will call you within 10 minutes!','success')">Talk to Expert</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- end page-home -->
+
+
+  <!-- ================================================
+     PAGE: LISTINGS
+     ================================================ -->
+  <div id="page-listings" class="page" style="display:none; padding-top: var(--nav-h);">
+    <div class="container" style="padding-top:32px; padding-bottom:80px;">
+
+      <!-- Page Header -->
+      <div style="margin-bottom:24px;">
+        <div style="display:flex; align-items:center; gap:8px; font-size:13px; color:var(--muted); margin-bottom:8px;">
+          <a href="#" data-page="page-home" style="color:var(--muted);">Home</a>
+          <span>›</span><span>Buy</span><span>›</span><span style="color:var(--charcoal);">All Properties</span>
+        </div>
+        <h1 style="font-family:var(--font-display); font-size:28px; font-weight:700; color:var(--charcoal);">Properties
+          for Sale in India</h1>
+        <p style="color:var(--muted); font-size:14px; margin-top:4px;">Showing 1,24,680 verified properties</p>
+      </div>
+
+      <!-- Filters Bar -->
+      <div class="filters-bar">
+        <span class="filter-label">Filter:</span>
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+          <button class="filter-chip active" data-single>All</button>
+          <button class="filter-chip" data-single>Ready to Move</button>
+          <button class="filter-chip" data-single>Under Construction</button>
+          <span style="width:1px; height:20px; background:var(--border); margin:0 4px;"></span>
+          <button class="filter-chip">Owner</button>
+          <button class="filter-chip">Builder</button>
+          <button class="filter-chip">Agent</button>
+          <span style="width:1px; height:20px; background:var(--border); margin:0 4px;"></span>
+          <select class="filter-select">
+            <option>Any BHK</option>
+            <option>1 BHK</option>
+            <option>2 BHK</option>
+            <option>3 BHK</option>
+            <option>4+ BHK</option>
+          </select>
+          <select class="filter-select">
+            <option>Any Budget</option>
+            <option>Under ₹50 L</option>
+            <option>₹50L – ₹1Cr</option>
+            <option>₹1–2 Cr</option>
+            <option>Above ₹2 Cr</option>
+          </select>
+          <select class="filter-select">
+            <option>Any Size</option>
+            <option>Under 500 sqft</option>
+            <option>500–1000 sqft</option>
+            <option>1000–2000 sqft</option>
+            <option>Above 2000 sqft</option>
+          </select>
+        </div>
+        <div class="filter-sort" style="margin-left:auto; gap:6px;">
+          <button class="sort-btn active">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7" />
+              <rect x="14" y="3" width="7" height="7" />
+              <rect x="14" y="14" width="7" height="7" />
+              <rect x="3" y="14" width="7" height="7" />
+            </svg>
+          </button>
+          <button class="sort-btn view-toggle-btn" data-view="list">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="8" y1="6" x2="21" y2="6" />
+              <line x1="8" y1="12" x2="21" y2="12" />
+              <line x1="8" y1="18" x2="21" y2="18" />
+              <line x1="3" y1="6" x2="3.01" y2="6" />
+              <line x1="3" y1="12" x2="3.01" y2="12" />
+              <line x1="3" y1="18" x2="3.01" y2="18" />
+            </svg>
+          </button>
+          <select class="filter-select">
+            <option>Sort: Relevance</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Newest First</option>
+            <option>Area: Small to Large</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="listing-layout">
+        <!-- Sidebar Filters -->
+        <div class="sidebar">
+          <!-- Location -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-title">📍 Location</span>
+            </div>
+            <div class="sidebar-card-body">
+              <input type="text" placeholder="Search locality..." class="form-input" style="margin-bottom:10px;" />
+              <div class="checkbox-list">
+                <div class="checkbox-item">
+                  <label><input type="checkbox" checked /> Mumbai</label>
+                  <span class="checkbox-count">68K</span>
+                </div>
+                <div class="checkbox-item">
+                  <label><input type="checkbox" /> Bangalore</label>
+                  <span class="checkbox-count">52K</span>
+                </div>
+                <div class="checkbox-item">
+                  <label><input type="checkbox" /> Delhi NCR</label>
+                  <span class="checkbox-count">75K</span>
+                </div>
+                <div class="checkbox-item">
+                  <label><input type="checkbox" /> Pune</label>
+                  <span class="checkbox-count">44K</span>
+                </div>
+                <div class="checkbox-item">
+                  <label><input type="checkbox" /> Hyderabad</label>
+                  <span class="checkbox-count">38K</span>
+                </div>
+                <div class="checkbox-item">
+                  <label><input type="checkbox" /> Chennai</label>
+                  <span class="checkbox-count">29K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Budget -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-title">💰 Budget Range</span>
+              <span class="sidebar-clear">Clear</span>
+            </div>
+            <div class="sidebar-card-body">
+              <div class="price-range-wrap">
+                <div class="price-inputs">
+                  <input type="text" placeholder="Min ₹" class="price-inp" value="₹25 L" />
+                  <input type="text" placeholder="Max ₹" class="price-inp" value="₹2 Cr" />
+                </div>
+                <input type="range" class="range-slider" min="0" max="100" value="60" />
+              </div>
+            </div>
+          </div>
+
+          <!-- BHK -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-title">🛏️ BHK Type</span>
+            </div>
+            <div class="sidebar-card-body">
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <button class="filter-chip">1 RK</button>
+                <button class="filter-chip active">1 BHK</button>
+                <button class="filter-chip active">2 BHK</button>
+                <button class="filter-chip active">3 BHK</button>
+                <button class="filter-chip">4 BHK</button>
+                <button class="filter-chip">4+ BHK</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Amenities -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-title">✨ Amenities</span>
+            </div>
+            <div class="sidebar-card-body">
+              <div class="checkbox-list">
+                <div class="checkbox-item"><label><input type="checkbox" checked /> Gym</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" checked /> Swimming Pool</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Parking</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Power Backup</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Security</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Lift</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Club House</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Garden / Park</label></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RERA / Verified -->
+          <div class="sidebar-card">
+            <div class="sidebar-card-header">
+              <span class="sidebar-card-title">🛡️ Trust & Safety</span>
+            </div>
+            <div class="sidebar-card-body">
+              <div class="checkbox-list">
+                <div class="checkbox-item"><label><input type="checkbox" checked /> RERA Registered</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" checked /> Verified Listing</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Zero Brokerage</label></div>
+                <div class="checkbox-item"><label><input type="checkbox" /> Owner Direct</label></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Property Grid -->
+        <div>
+          <div class="props-grid">
+            <div class="prop-card" data-page="page-detail">
+              <div class="prop-img-wrap">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Villa"
+                  loading="lazy" />
+                <div class="prop-badges"><span class="prop-badge prop-badge-type">Villa</span><span
+                    class="prop-badge prop-badge-featured">Featured</span></div>
+                <button class="prop-fav">🤍</button>
+              </div>
+              <div class="prop-body">
+                <div class="prop-price">₹2.8 Cr</div>
+                <div class="prop-title">Elegant 4 BHK Villa with Private Pool</div>
+                <div class="prop-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg> Bandra West, Mumbai</div>
+                <div class="prop-features">
+                  <div class="prop-feat"><span class="feat-icon">🛏️</span> 4 BHK</div>
+                  <div class="prop-feat"><span class="feat-icon">🚿</span> 4 Bath</div>
+                  <div class="prop-feat"><span class="feat-icon">📐</span> 3,200 sqft</div>
+                </div>
+              </div>
+              <div class="prop-footer">
+                <div class="prop-agent"><img src="https://i.pravatar.cc/28?img=1" alt=""
+                    class="prop-agent-avatar" /><span class="prop-agent-name">Rahul Sharma</span></div><span
+                  class="prop-posted">2 days ago</span>
+              </div>
+            </div>
+            <div class="prop-card" data-page="page-detail">
+              <div class="prop-img-wrap">
+                <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Apartment"
+                  loading="lazy" />
+                <div class="prop-badges"><span class="prop-badge prop-badge-type">3 BHK</span><span
+                    class="prop-badge prop-badge-new">New</span></div>
+                <button class="prop-fav">🤍</button>
+              </div>
+              <div class="prop-body">
+                <div class="prop-price">₹85 L</div>
+                <div class="prop-title">Modern 3 BHK High-Rise Apartment</div>
+                <div class="prop-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg> Koregaon Park, Pune</div>
+                <div class="prop-features">
+                  <div class="prop-feat"><span class="feat-icon">🛏️</span> 3 BHK</div>
+                  <div class="prop-feat"><span class="feat-icon">🚿</span> 2 Bath</div>
+                  <div class="prop-feat"><span class="feat-icon">📐</span> 1,450 sqft</div>
+                </div>
+              </div>
+              <div class="prop-footer">
+                <div class="prop-agent"><img src="https://i.pravatar.cc/28?img=5" alt=""
+                    class="prop-agent-avatar" /><span class="prop-agent-name">Priya Mehta</span></div><span
+                  class="prop-posted">1 day ago</span>
+              </div>
+            </div>
+            <div class="prop-card" data-page="page-detail">
+              <div class="prop-img-wrap">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Penthouse"
+                  loading="lazy" />
+                <div class="prop-badges"><span class="prop-badge prop-badge-type">Penthouse</span><span
+                    class="prop-badge prop-badge-featured">Premium</span></div>
+                <button class="prop-fav">🤍</button>
+              </div>
+              <div class="prop-body">
+                <div class="prop-price">₹5.2 Cr</div>
+                <div class="prop-title">Ultra-Luxury Penthouse with Rooftop</div>
+                <div class="prop-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg> Golf Links, New Delhi</div>
+                <div class="prop-features">
+                  <div class="prop-feat"><span class="feat-icon">🛏️</span> 5 BHK</div>
+                  <div class="prop-feat"><span class="feat-icon">🚿</span> 5 Bath</div>
+                  <div class="prop-feat"><span class="feat-icon">📐</span> 5,800 sqft</div>
+                </div>
+              </div>
+              <div class="prop-footer">
+                <div class="prop-agent"><img src="https://i.pravatar.cc/28?img=12" alt=""
+                    class="prop-agent-avatar" /><span class="prop-agent-name">Kavya Nair</span></div><span
+                  class="prop-posted">3 days ago</span>
+              </div>
+            </div>
+            <div class="prop-card" data-page="page-detail">
+              <div class="prop-img-wrap">
+                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80" alt="Row House"
+                  loading="lazy" />
+                <div class="prop-badges"><span class="prop-badge prop-badge-type">Row House</span></div>
+                <button class="prop-fav">🤍</button>
+              </div>
+              <div class="prop-body">
+                <div class="prop-price">₹1.6 Cr</div>
+                <div class="prop-title">4 BHK Independent Row House</div>
+                <div class="prop-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg> Jubilee Hills, Hyderabad</div>
+                <div class="prop-features">
+                  <div class="prop-feat"><span class="feat-icon">🛏️</span> 4 BHK</div>
+                  <div class="prop-feat"><span class="feat-icon">🚿</span> 3 Bath</div>
+                  <div class="prop-feat"><span class="feat-icon">📐</span> 2,200 sqft</div>
+                </div>
+              </div>
+              <div class="prop-footer">
+                <div class="prop-agent"><img src="https://i.pravatar.cc/28?img=15" alt=""
+                    class="prop-agent-avatar" /><span class="prop-agent-name">Suresh Reddy</span></div><span
+                  class="prop-posted">1 week ago</span>
+              </div>
+            </div>
+            <div class="prop-card" data-page="page-detail">
+              <div class="prop-img-wrap">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="2BHK"
+                  loading="lazy" />
+                <div class="prop-badges"><span class="prop-badge prop-badge-type">2 BHK</span><span
+                    class="prop-badge prop-badge-new">Ready</span></div>
+                <button class="prop-fav">🤍</button>
+              </div>
+              <div class="prop-body">
+                <div class="prop-price">₹68 L</div>
+                <div class="prop-title">Spacious 2 BHK near IT Corridor</div>
+                <div class="prop-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg> OMR, Chennai</div>
+                <div class="prop-features">
+                  <div class="prop-feat"><span class="feat-icon">🛏️</span> 2 BHK</div>
+                  <div class="prop-feat"><span class="feat-icon">🚿</span> 2 Bath</div>
+                  <div class="prop-feat"><span class="feat-icon">📐</span> 1,100 sqft</div>
+                </div>
+              </div>
+              <div class="prop-footer">
+                <div class="prop-agent"><img src="https://i.pravatar.cc/28?img=20" alt=""
+                    class="prop-agent-avatar" /><span class="prop-agent-name">Lakshmi V.</span></div><span
+                  class="prop-posted">4 days ago</span>
+              </div>
+            </div>
+            <div class="prop-card" data-page="page-detail">
+              <div class="prop-img-wrap">
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Studio"
+                  loading="lazy" />
+                <div class="prop-badges"><span class="prop-badge prop-badge-type">Studio</span></div>
+                <button class="prop-fav">🤍</button>
+              </div>
+              <div class="prop-body">
+                <div class="prop-price">₹45 L</div>
+                <div class="prop-title">Premium Studio in Tech Corridor</div>
+                <div class="prop-location"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg> Whitefield, Bangalore</div>
+                <div class="prop-features">
+                  <div class="prop-feat"><span class="feat-icon">🛏️</span> Studio</div>
+                  <div class="prop-feat"><span class="feat-icon">🚿</span> 1 Bath</div>
+                  <div class="prop-feat"><span class="feat-icon">📐</span> 550 sqft</div>
+                </div>
+              </div>
+              <div class="prop-footer">
+                <div class="prop-agent"><img src="https://i.pravatar.cc/28?img=8" alt=""
+                    class="prop-agent-avatar" /><span class="prop-agent-name">Amit Joshi</span></div><span
+                  class="prop-posted">5 hours ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Load More -->
+          <div style="text-align:center; margin-top:36px;">
+            <button class="btn btn-outline btn-lg" onclick="showToast('🔄 Loading more properties...','info',2000)">Load
+              More Properties</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map View -->
+      <div style="margin-top:48px;">
+        <h3 style="font-family:var(--font-display); font-size:22px; font-weight:700; margin-bottom:16px;">📍 Map View
+        </h3>
+        <div class="map-container">
+          <div class="map-placeholder">
+            <div class="map-placeholder-icon">🗺️</div>
+            <div class="map-placeholder-text">Interactive Map — Shows all property locations</div>
+            <p style="font-size:13px; color:var(--muted); margin-top:4px;">Enable location for personalized results</p>
+            <button class="btn btn-primary" style="margin-top:16px;"
+              onclick="showToast('📍 Map loading...','info',2000)">Enable Map View</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div><!-- end page-listings -->
+
+
+  <!-- ================================================
+     PAGE: PROPERTY DETAIL
+     ================================================ -->
+  <div id="page-detail" class="page" style="display:none;">
+    <div class="detail-hero">
+      <div class="detail-gallery container" style="padding:0; max-width:100%;">
+        <div class="gallery-main">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1200&q=80"
+            alt="Property Main" style="height:560px;" />
+        </div>
+        <div class="gallery-thumb">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80"
+            alt="Interior" />
+        </div>
+        <div class="gallery-thumb" style="position:relative;">
+          <img class="gallery-img" src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80"
+            alt="Living Room" />
+          <div class="gallery-overlay">
+            <button class="gallery-count-btn"
+              onclick="showToast('🖼️ Gallery feature — 24 photos available', 'info')">+20 Photos</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="detail-body">
+        <div class="detail-main">
+
+          <!-- Breadcrumb -->
+          <div
+            style="display:flex; align-items:center; gap:8px; font-size:13px; color:var(--muted); margin-bottom:20px;">
+            <a href="#" data-page="page-home" style="color:var(--muted);">Home</a>
+            <span>›</span><a href="#" data-page="page-listings" style="color:var(--muted);">Buy</a>
+            <span>›</span><span>Mumbai</span><span>›</span><span style="color:var(--charcoal);">Bandra West</span>
+          </div>
+
+          <!-- Price & Actions -->
+          <div class="detail-price-row">
+            <div>
+              <div class="detail-price">₹2.8 Cr <span class="detail-price-per">— ₹8,750/sqft</span></div>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn btn-outline btn-sm" onclick="shareProperty('4 BHK Villa Bandra', '2.8 Cr')">🔗
+                Share</button>
+              <button class="btn btn-outline btn-sm" onclick="downloadBrochure()">📄 Brochure</button>
+            </div>
+          </div>
+
+          <h1 class="detail-title">Elegant 4 BHK Luxury Villa with Private Pool & Garden</h1>
+          <div class="detail-address">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+              <circle cx="12" cy="10" r="3" />
+            </svg>
+            Plot 24, Pali Hill, Bandra West, Mumbai – 400050
+          </div>
+
+          <!-- Badges -->
+          <div style="display:flex; gap:8px; margin-bottom:24px; flex-wrap:wrap;">
+            <span class="tag tag-sage">✅ Verified</span>
+            <span class="tag tag-gold">⭐ RERA: MH/2024/123456</span>
+            <span class="tag tag-sky">🏠 Ready to Move</span>
+            <span class="tag tag-rust">🔥 High Demand</span>
+          </div>
+
+          <!-- Key Details -->
+          <div class="detail-chips">
+            <div class="detail-chip"><span class="dc-icon">🛏️</span>
+              <div>
+                <div class="dc-value">4 BHK</div>
+                <div class="dc-label">Bedrooms</div>
+              </div>
+            </div>
+            <div class="detail-chip"><span class="dc-icon">🚿</span>
+              <div>
+                <div class="dc-value">4</div>
+                <div class="dc-label">Bathrooms</div>
+              </div>
+            </div>
+            <div class="detail-chip"><span class="dc-icon">📐</span>
+              <div>
+                <div class="dc-value">3,200</div>
+                <div class="dc-label">sqft</div>
+              </div>
+            </div>
+            <div class="detail-chip"><span class="dc-icon">🅿️</span>
+              <div>
+                <div class="dc-value">2</div>
+                <div class="dc-label">Parking</div>
+              </div>
+            </div>
+            <div class="detail-chip"><span class="dc-icon">🧭</span>
+              <div>
+                <div class="dc-value">East</div>
+                <div class="dc-label">Facing</div>
+              </div>
+            </div>
+            <div class="detail-chip"><span class="dc-icon">🏗️</span>
+              <div>
+                <div class="dc-value">2020</div>
+                <div class="dc-label">Built Year</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="detail-section">
+            <div class="detail-section-title">About this Property</div>
+            <p style="font-size:15px; color:var(--slate); line-height:1.8;">
+              A stunning 4 BHK luxury villa nestled in the heart of Pali Hill, Bandra West — one of Mumbai's most
+              prestigious residential addresses. The property features an expansive double-height living room, a modern
+              Italian kitchen, four spacious bedrooms with en-suite bathrooms, and a gorgeous private pool surrounded by
+              a landscaped garden.
+            </p>
+            <p style="font-size:15px; color:var(--slate); line-height:1.8; margin-top:14px;">
+              The villa enjoys unobstructed sea views from the top floor, 24/7 security, and premium fittings
+              throughout. Located minutes from top schools, hospitals, and entertainment hubs.
+            </p>
+          </div>
+
+          <!-- Amenities -->
+          <div class="detail-section">
+            <div class="detail-section-title">Amenities & Features</div>
+            <div class="amenities-grid">
+              <div class="amenity-item"><span class="am-check">✓</span> Private Swimming Pool</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Modular Kitchen</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Home Theater</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Central AC</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Servant Quarter</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Landscaped Garden</div>
+              <div class="amenity-item"><span class="am-check">✓</span> 24/7 Security</div>
+              <div class="amenity-item"><span class="am-check">✓</span> CCTV Surveillance</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Power Backup</div>
+              <div class="amenity-item"><span class="am-check">✓</span> 2 Car Parking</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Video Door Phone</div>
+              <div class="amenity-item"><span class="am-check">✓</span> Solar Panels</div>
+            </div>
+          </div>
+
+          <!-- Price Breakdown -->
+          <div class="detail-section">
+            <div class="detail-section-title">Price Breakdown</div>
+            <div
+              style="background:var(--cream); border-radius:var(--radius-lg); padding:20px; border:1px solid var(--border);">
+              <div
+                style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border);">
+                <span style="font-size:14px; color:var(--muted);">Base Price</span>
+                <span style="font-size:14px; font-weight:600;">₹2,60,00,000</span>
+              </div>
+              <div
+                style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border);">
+                <span style="font-size:14px; color:var(--muted);">Floor Rise Premium</span>
+                <span style="font-size:14px; font-weight:600;">₹10,00,000</span>
+              </div>
+              <div
+                style="display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border);">
+                <span style="font-size:14px; color:var(--muted);">Parking (2 slots)</span>
+                <span style="font-size:14px; font-weight:600;">₹10,00,000</span>
+              </div>
+              <div style="display:flex; justify-content:space-between; padding:12px 0 0;">
+                <span style="font-size:16px; font-weight:700; color:var(--charcoal);">Total (approx.)</span>
+                <span style="font-size:18px; font-weight:700; color:var(--gold);">₹2,80,00,000</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Location -->
+          <div class="detail-section">
+            <div class="detail-section-title">📍 Location & Nearby</div>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:16px;">
+              <div
+                style="background:var(--sky-light); padding:12px 16px; border-radius:var(--radius); border:1px solid rgba(37,99,235,0.1);">
+                <div
+                  style="font-size:11px; color:var(--sky); font-weight:700; text-transform:uppercase; letter-spacing:0.06em;">
+                  School</div>
+                <div style="font-size:13px; font-weight:600; margin-top:4px;">St. Stanislaus</div>
+                <div style="font-size:12px; color:var(--muted);">0.4 km away</div>
+              </div>
+              <div
+                style="background:var(--sage-light); padding:12px 16px; border-radius:var(--radius); border:1px solid rgba(90,122,94,0.1);">
+                <div
+                  style="font-size:11px; color:var(--sage); font-weight:700; text-transform:uppercase; letter-spacing:0.06em;">
+                  Hospital</div>
+                <div style="font-size:13px; font-weight:600; margin-top:4px;">Lilavati Hospital</div>
+                <div style="font-size:12px; color:var(--muted);">1.2 km away</div>
+              </div>
+              <div
+                style="background:var(--gold-pale); padding:12px 16px; border-radius:var(--radius); border:1px solid rgba(201,149,42,0.1);">
+                <div
+                  style="font-size:11px; color:var(--gold); font-weight:700; text-transform:uppercase; letter-spacing:0.06em;">
+                  Metro</div>
+                <div style="font-size:13px; font-weight:600; margin-top:4px;">Bandra Station</div>
+                <div style="font-size:12px; color:var(--muted);">0.8 km away</div>
+              </div>
+              <div
+                style="background:#FEF0EC; padding:12px 16px; border-radius:var(--radius); border:1px solid rgba(192,68,31,0.1);">
+                <div
+                  style="font-size:11px; color:var(--rust); font-weight:700; text-transform:uppercase; letter-spacing:0.06em;">
+                  Mall</div>
+                <div style="font-size:13px; font-weight:600; margin-top:4px;">Linking Road</div>
+                <div style="font-size:12px; color:var(--muted);">0.6 km away</div>
+              </div>
+            </div>
+            <div class="map-container" style="height:300px;">
+              <div class="map-placeholder">
+                <div class="map-placeholder-icon">🗺️</div>
+                <div class="map-placeholder-text">View on Map</div>
+                <button class="btn btn-primary btn-sm" style="margin-top:12px;"
+                  onclick="showToast('🗺️ Opening map...','info')">Open Full Map</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Contact / Enquiry Card -->
+        <div>
+          <div class="contact-card">
+            <div class="contact-agent">
+              <img src="https://i.pravatar.cc/56?img=1" alt="Agent" class="contact-agent-avatar" />
+              <div>
+                <div class="contact-agent-name">Rahul Sharma</div>
+                <div class="contact-agent-tag">Verified Agent · 8 years exp.</div>
+                <div class="contact-agent-rating">★ 4.9 <span style="color:var(--muted); font-weight:400;">(142
+                    reviews)</span></div>
+              </div>
+            </div>
+
+            <div
+              style="background:var(--gold-pale); border-radius:var(--radius); padding:12px 14px; margin-bottom:16px; display:flex; align-items:center; gap:8px;">
+              <span style="font-size:18px;">🏅</span>
+              <div>
+                <div style="font-size:13px; font-weight:700; color:var(--gold);">Premium Verified Listing</div>
+                <div style="font-size:11px; color:var(--muted);">Physical verified by NESTIQ team</div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <input type="text" class="form-input" placeholder="Your Name" />
+              <input type="tel" class="form-input" placeholder="Mobile Number" />
+              <input type="email" class="form-input" placeholder="Email Address" />
+              <textarea class="form-input" placeholder="I'm interested in this property. Please share more details..."
+                rows="3"></textarea>
+            </div>
+
+            <button class="btn btn-primary" style="width:100%; margin-bottom:12px; padding:14px;"
+              onclick="showToast('✉️ Enquiry sent! Agent will contact you shortly.','success', 4000)">
+              Send Enquiry
+            </button>
+
+            <div class="contact-actions">
+              <button class="contact-btn-call" onclick="showToast('📞 Connecting to agent...','info')">
+                📞 Call Agent
+              </button>
+              <button class="contact-btn-whatsapp" onclick="showToast('💬 Opening WhatsApp...','success')">
+                💬 WhatsApp
+              </button>
+            </div>
+
+            <div
+              style="margin-top:16px; padding-top:14px; border-top:1px solid var(--border); text-align:center; font-size:12px; color:var(--muted);">
+              🔒 Your data is safe. We never share your contact details.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- end page-detail -->
+
+
+  <!-- ================================================
+     PAGE: BLOG / INSIGHTS
+     ================================================ -->
+  <div id="page-blog" class="page" style="display:none; padding-top: var(--nav-h);">
+    <div
+      style="background: linear-gradient(135deg, var(--charcoal) 0%, var(--slate) 100%); padding: 60px 0 80px; margin-bottom:-40px; position:relative;">
+      <div class="container" style="text-align:center;">
+        <div class="tag tag-gold" style="margin-bottom:16px;">Knowledge Hub</div>
+        <h1
+          style="font-family:var(--font-display); font-size:clamp(32px,5vw,52px); font-weight:700; color:white; margin-bottom:12px;">
+          Real Estate Insights</h1>
+        <p style="font-size:17px; color:rgba(255,255,255,0.65); max-width:500px; margin:0 auto 28px;">Expert analysis,
+          market trends & guides to help you make smarter property decisions.</p>
+        <div
+          style="display:flex; align-items:center; background:white; border-radius:var(--radius-lg); max-width:480px; margin:0 auto; overflow:hidden;">
+          <input type="text" placeholder="Search articles..."
+            style="flex:1; border:none; outline:none; padding:16px 20px; font-size:14px; background:transparent;" />
+          <button
+            style="background:var(--gold); color:white; border:none; padding:16px 24px; font-weight:700; font-size:14px; cursor:pointer;">Search</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container section-pad">
+      <div
+        style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:36px; background:white; padding:12px; border-radius:var(--radius-lg); border:1px solid var(--border);">
+        <button class="filter-chip active" data-single>All</button>
+        <button class="filter-chip" data-single>Market Trends</button>
+        <button class="filter-chip" data-single>Home Buying</button>
+        <button class="filter-chip" data-single>Home Loans</button>
+        <button class="filter-chip" data-single>Investment</button>
+        <button class="filter-chip" data-single>Legal & RERA</button>
+        <button class="filter-chip" data-single>Interior Design</button>
+        <button class="filter-chip" data-single>NRI Corner</button>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card" style="grid-column: span 1;">
+          <div class="blog-img" style="height:240px;"><img
+              src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="" loading="lazy" /></div>
+          <div class="blog-body">
+            <div class="blog-tag"><span class="tag tag-gold">Market Trends</span></div>
+            <div class="blog-title">Mumbai Real Estate: Is 2025 the Right Time to Buy?</div>
+            <div class="blog-excerpt">Prices are stabilizing after a surge. Here's what the data says about the best
+              localities for investment right now.</div>
+            <div class="blog-meta">
+              <div class="blog-author"><img src="https://i.pravatar.cc/24?img=10" alt="" /> Rohan Malhotra</div>
+              <span>·</span><span>March 18, 2025</span><span>·</span><span>5 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img"><img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&q=80" alt=""
+              loading="lazy" /></div>
+          <div class="blog-body">
+            <div class="blog-tag"><span class="tag tag-sage">Home Loans</span></div>
+            <div class="blog-title">10 Things to Check Before Signing a Property Agreement</div>
+            <div class="blog-excerpt">Legal traps that first-time buyers miss. A comprehensive checklist from our
+              property lawyers.</div>
+            <div class="blog-meta">
+              <div class="blog-author"><img src="https://i.pravatar.cc/24?img=22" alt="" /> Adv. Smita Joshi</div>
+              <span>·</span><span>8 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt=""
+              loading="lazy" /></div>
+          <div class="blog-body">
+            <div class="blog-tag"><span class="tag tag-sky">Investment</span></div>
+            <div class="blog-title">Hyderabad's Top 5 Localities for Long-Term ROI in 2025</div>
+            <div class="blog-excerpt">HITEC City vs Gachibowli vs Kondapur — our analysts break down which area gives
+              the best returns.</div>
+            <div class="blog-meta">
+              <div class="blog-author"><img src="https://i.pravatar.cc/24?img=33" alt="" /> Deepak Rao</div>
+              <span>·</span><span>6 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img"><img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
+              alt="" loading="lazy" /></div>
+          <div class="blog-body">
+            <div class="blog-tag"><span class="tag tag-rust">Legal & RERA</span></div>
+            <div class="blog-title">RERA 2025: What's Changed and What It Means for Buyers</div>
+            <div class="blog-excerpt">New amendments to the Real Estate Regulation Act provide stronger protections to
+              homebuyers across India.</div>
+            <div class="blog-meta">
+              <div class="blog-author"><img src="https://i.pravatar.cc/24?img=44" alt="" /> Nirmala Iyer</div>
+              <span>·</span><span>7 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80"
+              alt="" loading="lazy" /></div>
+          <div class="blog-body">
+            <div class="blog-tag"><span class="tag tag-gold">NRI Corner</span></div>
+            <div class="blog-title">Complete Guide to NRI Property Investment in India 2025</div>
+            <div class="blog-excerpt">FEMA rules, repatriation norms, and the best cities for NRI investment —
+              everything in one place.</div>
+            <div class="blog-meta">
+              <div class="blog-author"><img src="https://i.pravatar.cc/24?img=55" alt="" /> Kartik Verma</div>
+              <span>·</span><span>10 min</span>
+            </div>
+          </div>
+        </div>
+        <div class="blog-card">
+          <div class="blog-img"><img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80"
+              alt="" loading="lazy" /></div>
+          <div class="blog-body">
+            <div class="blog-tag"><span class="tag tag-sky">Home Buying</span></div>
+            <div class="blog-title">First-Time Buyer Checklist: 20 Questions to Ask Before Buying</div>
+            <div class="blog-excerpt">From title deed verification to society charges — the complete due diligence guide
+              for first-timers.</div>
+            <div class="blog-meta">
+              <div class="blog-author"><img src="https://i.pravatar.cc/24?img=66" alt="" /> Ananya Gupta</div>
+              <span>·</span><span>12 min</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:40px;">
+        <button class="btn btn-outline btn-lg" onclick="showToast('📰 Loading more articles...','info')">Load More
+          Articles</button>
+      </div>
+    </div>
+  </div><!-- end page-blog -->
+
+
+  <!-- ================================================
+     FOOTER (shared)
+     ================================================ -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="nav-logo" style="font-size:24px; margin-bottom:4px;">
+            <div class="logo-icon">N</div>
+            NESTIQ<span class="logo-dot">.</span>
+          </div>
+          <p class="footer-brand-desc">India's most trusted real estate platform. Find, buy, sell & rent verified
+            properties with confidence across 30+ cities.</p>
+          <div class="footer-social">
+            <a class="footer-social-btn" href="#" title="Facebook">f</a>
+            <a class="footer-social-btn" href="#" title="Twitter">𝕏</a>
+            <a class="footer-social-btn" href="#" title="Instagram">📷</a>
+            <a class="footer-social-btn" href="#" title="LinkedIn">in</a>
+            <a class="footer-social-btn" href="#" title="YouTube">▶</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Buy</div>
+          <div class="footer-col-links">
+            <a href="#" class="footer-col-link" data-page="page-listings">Residential</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Commercial</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">New Projects</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Plot / Land</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Luxury Homes</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Affordable</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Rent</div>
+          <div class="footer-col-links">
+            <a href="#" class="footer-col-link" data-page="page-listings">Furnished Homes</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Semi-Furnished</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">PG / Hostel</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Office Space</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Shops</a>
+            <a href="#" class="footer-col-link" data-page="page-listings">Warehouse</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Company</div>
+          <div class="footer-col-links">
+            <a href="#" class="footer-col-link">About Us</a>
+            <a href="#" class="footer-col-link">Careers</a>
+            <a href="#" class="footer-col-link">Press / Media</a>
+            <a href="#" class="footer-col-link">Contact Us</a>
+            <a href="#" class="footer-col-link">Agent Registration</a>
+            <a href="#" class="footer-col-link" data-page="page-blog">Blog & Insights</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Resources</div>
+          <div class="footer-col-links">
+            <a href="#" class="footer-col-link">Home Loan</a>
+            <a href="#" class="footer-col-link">Legal Services</a>
+            <a href="#" class="footer-col-link">RERA Guide</a>
+            <a href="#" class="footer-col-link">Vastu Tips</a>
+            <a href="#" class="footer-col-link">Moving Services</a>
+            <a href="#" class="footer-col-link">Interior Design</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 NESTIQ Technologies Pvt. Ltd. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          <a href="#" class="footer-bottom-link">Terms of Use</a>
+          <a href="#" class="footer-bottom-link">Cookie Policy</a>
+          <a href="#" class="footer-bottom-link">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ================================================
+     MODALS
+     ================================================ -->
+
+  <!-- Login Modal -->
+  <div class="modal-overlay" id="modal-login">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Welcome Back 👋</span>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <div style="display:flex; gap:8px; margin-bottom:24px;">
+          <button class="btn btn-primary" style="flex:1;">Login</button>
+          <button class="btn btn-outline" style="flex:1;"
+            onclick="showToast('Register feature coming soon!','info')">Register</button>
+        </div>
+        <div class="contact-form">
+          <input type="tel" class="form-input" placeholder="Mobile Number or Email" />
+          <input type="password" class="form-input" placeholder="Password" />
+        </div>
+        <div style="text-align:right; margin:8px 0 16px;"><a href="#" style="font-size:13px; color:var(--gold);">Forgot
+            Password?</a></div>
+        <button class="btn btn-gold" style="width:100%; padding:14px;"
+          onclick="closeModal('modal-login'); showToast('🎉 Welcome back! Logged in successfully.','success',3000)">Login
+          to NESTIQ</button>
+        <div style="text-align:center; margin:20px 0; font-size:13px; color:var(--muted);">— or continue with —</div>
+        <div style="display:flex; gap:10px;">
+          <button class="btn btn-outline" style="flex:1;" onclick="showToast('Google login coming soon','info')">🔍
+            Google</button>
+          <button class="btn btn-outline" style="flex:1;" onclick="showToast('Facebook login coming soon','info')">📘
+            Facebook</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Post Property Modal -->
+  <div class="modal-overlay" id="modal-post">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Post Your Property 🏠</span>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <div
+          style="background:var(--gold-pale); border-radius:var(--radius); padding:12px 16px; margin-bottom:20px; display:flex; gap:10px; align-items:center;">
+          <span style="font-size:20px;">🎁</span>
+          <div style="font-size:13px; font-weight:600; color:var(--gold);">100% FREE listing — No hidden charges!</div>
+        </div>
+        <div style="display:flex; gap:8px; margin-bottom:16px;">
+          <button class="filter-chip active" data-single>Sell</button>
+          <button class="filter-chip" data-single>Rent</button>
+          <button class="filter-chip" data-single>PG</button>
+          <button class="filter-chip" data-single>Commercial</button>
+        </div>
+        <div class="contact-form">
+          <select class="form-input">
+            <option>Property Type</option>
+            <option>Apartment / Flat</option>
+            <option>Independent House</option>
+            <option>Villa</option>
+            <option>Plot</option>
+            <option>Commercial</option>
+          </select>
+          <input type="text" class="form-input" placeholder="Property Location / Locality" />
+          <div style="display:flex; gap:10px;">
+            <input type="text" class="form-input" placeholder="Expected Price (₹)" style="flex:1;" />
+            <select class="form-input" style="flex:1;">
+              <option>BHK Type</option>
+              <option>1 BHK</option>
+              <option>2 BHK</option>
+              <option>3 BHK</option>
+              <option>4+ BHK</option>
+            </select>
+          </div>
+          <input type="text" class="form-input" placeholder="Your Name" />
+          <input type="tel" class="form-input" placeholder="Mobile Number" />
+        </div>
+        <button class="btn btn-gold" style="width:100%; padding:14px; margin-top:4px;"
+          onclick="closeModal('modal-post'); showToast('🚀 Property submitted! Our team will review and post within 24 hours.','success', 5000)">
+          Post Property FREE →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Loan Pre-Approval Modal -->
+  <div class="modal-overlay" id="modal-loan">
+    <div class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Get Loan Pre-Approval 🏦</span>
+        <button class="modal-close">×</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:14px; color:var(--muted); margin-bottom:20px;">Check your eligibility in 2 minutes. 20+
+          banks. Zero impact on CIBIL score.</p>
+        <div class="contact-form">
+          <input type="text" class="form-input" placeholder="Full Name" />
+          <input type="tel" class="form-input" placeholder="Mobile Number" />
+          <input type="text" class="form-input" placeholder="Monthly Income (₹)" />
+          <select class="form-input">
+            <option>Employment Type</option>
+            <option>Salaried</option>
+            <option>Self Employed</option>
+            <option>Business Owner</option>
+            <option>NRI</option>
+          </select>
+          <input type="text" class="form-input" placeholder="Required Loan Amount (₹)" />
+        </div>
+        <button class="btn btn-gold" style="width:100%; padding:14px; margin-top:4px;"
+          onclick="closeModal('modal-loan'); showToast('🎉 Eligibility check submitted! Our loan expert will call you in 30 minutes.','success', 5000)">
+          Check My Eligibility →
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
